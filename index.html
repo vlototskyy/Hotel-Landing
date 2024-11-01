@@ -1,14 +1,153 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Hotel Landing">
-        <title>Hotel Landing</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-      </head>
-    <body>
-        <h1>Hello</h1>
-    </body>      
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Landing">
+    <title>Hotel Landing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <header>
+            <div class="top-bar">
+                <img width="100px" height="66px" src="assets/images/logo.svg" alt="logo image">
+                <nav>
+                    <ul>
+                        <li class="sign-in"><a href="#">Sign in</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- Burger Icon -->
+                <div class="burger-icon" onclick="toggleDrawer()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="outer-main-nav">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#">Dining</a></li>
+                        <li><a href="#">Experience</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">More</a></li>
+                    </ul>
+                    <button class="book-now button">Book now</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Side Drawer -->
+        <div class="side-drawer">
+            <div class="side-drawer-inner">
+                <button class="close-drawer" onclick="toggleDrawer()">X</button>
+                <ul>
+                    <li><a href="#">Sign in</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Dining</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+                <button class="book-now button">Book now</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <h2>Welcome to Our Website</h2>
+            <p>Discover our services and solutions designed for you.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>We are dedicated to providing top-notch services to our clients.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-list">
+                    <article class="service-item">
+                        <h3>Service One</h3>
+                        <p>Brief description of the first service.</p>
+                    </article>
+                    <article class="service-item">
+                        <h3>Service Two</h3>
+                        <p>Brief description of the second service.</p>
+                    </article>
+                    <article class="service-item">
+                        <h3>Service Three</h3>
+                        <p>Brief description of the third service.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <blockquote>
+                    <p>"This service has changed my life!"</p>
+                    <footer>- Happy Client</footer>
+                </blockquote>
+                <blockquote>
+                    <p>"Highly recommend for anyone looking for quality."</p>
+                    <footer>- Satisfied Customer</footer>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDrawer() {
+            document.querySelector('.side-drawer').classList.toggle('active');
+        }
+    </script>
+</body>
+
 </html>

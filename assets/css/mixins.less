@@ -1,0 +1,41 @@
+//
+//  Flex layout
+//  ---------------------------------------------
+.lib-vendor-prefix-display(
+    @_value: flex
+) {
+    display: ~"-webkit-@{_value}";
+    display: ~"-ms-@{_value}box";
+    display: @_value;
+}
+
+.lib-vendor-prefix-flex-direction (
+    @_value: column
+) {
+    -webkit-flex-direction: @_value;
+        -ms-flex-direction: @_value;
+            flex-direction: @_value;
+}
+
+.lib-vendor-prefix-justify-content (
+    @_value: space-between
+) {
+    -webkit-box-pack: @_value;
+       -ms-flex-pack: @_value;
+     justify-content: @_value;
+}
+
+.lib-vendor-box-align (
+    @_value: stretch
+) {
+    -webkit-align-items: @_value;
+        -ms-align-items: @_value;
+            align-items: @_value;
+}
+
+.lib-vendor-prefix-flex-wrap (
+    @_value: wrap
+) {
+    -webkit-flex-wrap: @_value;
+            flex-wrap: @_value;
+}

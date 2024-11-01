@@ -1,0 +1,82 @@
+//
+//  Common
+//  ---------------------------------------------
+
+.burger-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+        width: 25px;
+        height: 3px;
+        background-color: @color__white;
+        margin: 4px 0;
+    }
+}
+
+.side-drawer {
+    .lib-vendor-prefix-display();
+    .lib-vendor-prefix-flex-direction();
+    .lib-vendor-box-align(flex-start);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: @color__white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    padding: @indent__base;
+    z-index: 1000;
+
+    .side-drawer-inner {
+        position: relative;
+        width: 100%;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: @indent__base;
+
+        li {
+            margin: @indent__s 0;
+        }
+    }
+
+    .close-drawer {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &.active {
+        right: 0;
+    }
+}
+
+//
+//  Mobile
+//  ---------------------------------------------
+
+@media (max-width: 767px) {
+    .top-bar {
+        nav {
+            display: none;
+        }
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .burger-icon {
+        .lib-vendor-prefix-display();
+    }
+}
