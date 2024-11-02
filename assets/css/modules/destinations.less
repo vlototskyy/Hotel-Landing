@@ -1,0 +1,138 @@
+//
+//  Common
+//  ---------------------------------------------
+
+.destinations {
+    position: relative;
+    padding: @indent__m;
+    text-align: center;
+    z-index: 1;
+    min-height: 350px;
+
+    > *:not(img) {
+        position: relative;
+        z-index: 1;
+    }
+
+    .float-img {
+        position: absolute;
+        animation: float 5s ease-in-out infinite;
+        transition: transform 0.3s ease;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+
+        & {
+            left: unset;
+            opacity: .5;
+        }
+
+        &:last-of-type {
+            rotate: 25deg;
+        }
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+//
+//  Desktop
+//  ---------------------------------------------
+
+@media screen and (min-width: 480px) {
+    .float-img {
+        & {
+            width: 150px;
+            height: 150px;
+        }
+
+        &:first-of-type {
+            width: 200px;
+            height: 250px;
+            left: 0;
+            top: 0;
+        }
+
+        &:nth-of-type(2) {
+            right: 15%;
+            top: 0%;
+        }
+
+        &:last-of-type {
+            right: 30%;
+            top: 60%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .float-img {
+        & {
+            width: 200px;
+            height: 200px;
+            left: unset;
+        }
+
+        &:first-of-type {
+            left: 0;
+            top: -5%;
+            width: 300px;
+            height: 350px;
+        }
+
+        &:nth-of-type(2) {
+            right: 5%;
+            top: 5%;
+        }
+
+        &:last-of-type {
+            right: 30%;
+            top: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .float-img {
+        &:first-of-type {
+            left: 15%;
+            top: 0;
+            width: 350px;
+            height: 400px;
+        }
+    }
+}
+
+
+//
+//  Mobile
+//  ---------------------------------------------
+
+@media screen and (max-width: 479px) {
+    .float-img {
+        & {
+            width: 100px;
+            height: 100px;
+        }
+
+        &:first-of-type {
+            width: 150px;
+            height: 200px;
+            left: 0;
+            top: 0;
+        }
+
+        &:nth-of-type(2) {
+            right: 15%;
+            top: 30%;
+        }
+
+        &:last-of-type {
+            right: 30%;
+            top: 70%;
+        }
+    }
+}

@@ -4,16 +4,15 @@
 
 .hero-container {
     .lib-vendor-prefix-display();
-    padding: 0 @indent__m;
-    max-width: 1600px;
     margin: 0 auto;
+    padding: @indent__m;
 
     .informational {
         .lib-vendor-prefix-display();
         .lib-vendor-prefix-flex-direction();
 
         .dancing {
-            font-weight: 600px;
+            font-weight: 600;
             margin: 0 0 @indent__m;
         }
 
@@ -27,8 +26,7 @@
             margin: 0 0 @indent__l;
         }
 
-        .buttons,
-        .buttons>div {
+        .buttons {
             .lib-vendor-prefix-display();
             .lib-vendor-box-align(center);
             gap: @indent__xl;
@@ -36,12 +34,33 @@
             div {
                 gap: @indent__base - 5;
             }
+        }
+    }
+
+    .play-container {
+            .lib-vendor-prefix-display();
+            .lib-vendor-box-align(center);
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: border 0.3s ease;
+            padding: @indent__xs @indent__s;
+        
+            &:hover {
+                border-color: #44318D;
+                
+                #play {
+                    background-image: url(../../../assets/images/play-hover.svg);
+                    opacity: 1;
+                }
+            }
 
             label {
                 font-size: 20px;
+                cursor: pointer;
             }
         }
-
+        
         #play {
             width: 55px;
             height: 55px;
@@ -51,8 +70,8 @@
             background-position: center;
             border: none;
             cursor: pointer;
+            transition: background-image 0.3s ease, opacity 0.3s ease; 
         }
-    }
 
     .media-container {
         overflow: hidden;
@@ -74,6 +93,10 @@
     }
 }
 
+.informational {
+    padding: @indent__m 0;
+}
+
 //
 //  Desktop
 //  ---------------------------------------------
@@ -87,7 +110,7 @@
             flex: 0 0 50%;
 
             .inner {
-                margin: @indent__m * 2 0 @indent__m * 2 @indent__m * 2;
+                margin: auto;
                 max-width: 500px;
             }
 
@@ -111,7 +134,7 @@
 //  Mobile
 //  ---------------------------------------------
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 640px) and (max-width: 1199px) {
     .hero-container {
         position: relative;
 
@@ -122,11 +145,11 @@
             transform: translate(-50%, -50%);
             z-index: 1;
             background: @color__base;
-            padding: @indent__m;
             min-width: 500px;
             border: 1px solid rgba(0, 0, 0, .5);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
             border-radius: 5px;
+            padding: @indent__m;
 
             .dancing {
                 font-size: 40px;
@@ -149,9 +172,45 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 639px) {
     .hero-container {
-        padding: @indent__m;
+        .informational {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../../../assets/images/slider-imgs/image_2.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            color: @color__base;
+            border-radius: 5px;
+
+            h3,
+            h4 {
+                &.dancing {
+                    font-size: 32px;
+                }
+
+                text-align: center;
+            }
+
+            .buttons {
+                .lib-vendor-prefix-justify-content(center);
+            }
+        }
+
+        .media-container {
+            display: none;
+        }
+
+        .play-container {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .hero-container,
+    .informational {
+        padding: @indent__m @indent__s;
 
     }
 }

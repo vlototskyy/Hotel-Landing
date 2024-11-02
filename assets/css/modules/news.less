@@ -1,0 +1,71 @@
+//
+//  Common
+//  ---------------------------------------------
+
+.news {
+    .lib-vendor-prefix-display();
+    .lib-vendor-prefix-flex-direction();
+    .lib-vendor-box-align(center);
+    .lib-vendor-prefix-justify-content(center);
+    background-image: linear-gradient(rgba(103, 89, 194, 0.6), rgba(103, 89, 194, 0.6)), url(../../../assets/images/news/restaurant-interior.png);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: @indent__xl @indent__m;
+
+    h2, h3 {
+        color: @color__base;
+    }
+
+    h3 {
+        margin-top: 0;
+        text-align: center;
+        max-width: 75%;
+    }
+
+    .cards-container {
+        .lib-vendor-prefix-display();
+        .lib-vendor-prefix-justify-content(space-evenly);
+        .lib-vendor-prefix-flex-wrap();
+        gap: @indent__xl @indent__base;
+        width: 100%;
+
+        .card {
+            padding: @indent__m @indent__m 0;
+            text-align: center;
+            border-radius: 10px;
+            background: @color__base;
+            transition: .3s transform ease;
+            
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+    }
+}
+
+//
+//  Mobile
+//  ---------------------------------------------
+
+@media screen and (max-width: 479px) {
+    .news {
+        .cards-container {
+            .card {
+                padding: @indent__s + 5 @indent__s + 5 0;
+            }
+        }
+    }
+}
