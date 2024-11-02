@@ -61,15 +61,18 @@ a {
     &:hover {
         background: #6759c2;
         box-shadow: 0 8px 15px rgba(67, 49, 141, 0.3);
-        transform: scale(1.05);   // Slight scaling effect
+        transform: scale(1.05);
     }
 
     &:active {
-        transform: scale(0.98);   // Subtle press effect
+        transform: scale(0.98);
         box-shadow: 0 5px 10px rgba(67, 49, 141, 0.2);
     }
 }
 
+.dancing {
+    font-family: "Dancing Script", cursive;
+}
 
 @media screen and (max-width: 767px) {
     a {
@@ -81,3 +84,4 @@ a {
 //  Modules' imports
 //  ---------------------------------------------
 @import "modules/header.less";
+@import "modules/hero.less";

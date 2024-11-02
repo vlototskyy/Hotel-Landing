@@ -2,16 +2,22 @@
 //  Common
 //  ---------------------------------------------
 
+.layout-flex {
+    .lib-vendor-prefix-display();
+    .lib-vendor-box-align(center);
+    .lib-vendor-prefix-justify-content();
+}
+
 header {
     background: @color__primary;
 }
 
 .top-bar,
 .main-nav {
+    .layout-flex;
+
     ul {
-        .lib-vendor-prefix-display();
-        .lib-vendor-box-align(center);
-        .lib-vendor-prefix-justify-content();
+        .layout-flex;
         list-style: none;
         width: 100%;
         gap: @indent__s;
@@ -19,9 +25,6 @@ header {
 }
 
 .top-bar {
-    .lib-vendor-prefix-display();
-    .lib-vendor-box-align(center);
-    .lib-vendor-prefix-justify-content();
     padding: 0 25px;
     max-width: 1600px;
     margin: 0 auto;
@@ -47,21 +50,23 @@ header {
     }
 
     a {
-        color: @color__white
+        color: @color__white;
+
+        &:after {
+            content: none;
+        }
     }
 }
 
 .main-nav {
-    .lib-vendor-prefix-display();
-    .lib-vendor-box-align(center);
-    .lib-vendor-prefix-justify-content();
     margin: 0 auto;
     gap: 50px;
     max-width: 1600px;
-    padding: @indent__sm @indent__m 0;
+    padding: @indent__sm @indent__m;
 
     ul {
-        width: calc(100% - 165px - 100px);
+        max-width: 1000px;
+        margin: 0 auto;
     }
 
     a {
@@ -80,7 +85,7 @@ header {
 @media (max-width: 1024px) {
     .main-nav {
         ul {
-            width: calc(100% - 165px - 50px);
+            width: calc(100% - 215px);
         }
     }
 }

@@ -12,6 +12,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
 
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -73,15 +79,36 @@
         </div>
     </header>
 
+    <!-- Hero -->
+    <div class="hero-container">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <h2>Welcome to Our Website</h2>
-            <p>Discover our services and solutions designed for you.</p>
-            <a href="#about" class="btn">Learn More</a>
+        <div class="informational">
+            <div class="inner">
+                <h3 class="title dancing">Oscar's Paradise View</h3>
+                <h3>Hotel for every moment rich in emotion</h3>
+                <h4>Every moment feels like the first time in paradise view</h4>
+                <div class="buttons">
+                    <button class="button">Book now</button>
+                    <div>
+                        <button id="play"></button>
+                        <label for="play">Take a tour</label>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+
+        <div class="media-container">
+            <div class="glide height-set">
+                <div class="glide__track height-set" data-glide-el="track">
+                    <ul class="glide__slides height-set">
+                        <li class="glide__slide height-set"><img src="assets/images/slider-imgs/image_1.jpeg"></li>
+                        <li class="glide__slide"><img src="assets/images/slider-imgs/image_2.jpg"></li>
+                        <li class="glide__slide"><img src="assets/images/slider-imgs/image_3.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main>
@@ -147,6 +174,16 @@
         function toggleDrawer() {
             document.querySelector('.side-drawer').classList.toggle('active');
         }
+    </script>
+
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            autoplay: 3000,
+            hoverPause: false
+        }).mount()
     </script>
 </body>
 
