@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,17 +38,19 @@
                 <span></span>
             </button>
         </div>
-        <nav class="outer-main-nav main-nav" aria-label="Main navigation">
-            <ul>
-                <li><a href="#">Dining</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Offers</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-            <button class="book-now button" aria-label="Book now">Book now</button>
-        </nav>
+        <div class="outer-main-nav">
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#">Dining</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+                <button class="book-now button" aria-label="Book now">Book now</button>
+            </nav>
+        </div>
 
         <div class="drawer-overlay" role="none"></div>
         <div id="side-drawer" class="side-drawer" role="navigation" aria-hidden="true">
@@ -81,7 +84,8 @@
                         <div class="play-container">
                             <button id="play" aria-label="Play music"></button>
                             <label for="play">Music for good mood :)</label>
-                            <audio id="music" duration="200" src="assets/audio/never-gonna-give-you-up.MP3" preload="auto"></audio>
+                            <audio id="music" duration="200" src="assets/audio/never-gonna-give-you-up.MP3"
+                                preload="auto"></audio>
                         </div>
                     </div>
                 </div>
@@ -158,7 +162,7 @@
                     <button class="login-button" type="submit">Login</button>
                 </form>
             </div>
-        </div>        
+        </div>
     </main>
 
     <footer role="contentinfo">
@@ -214,6 +218,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script src="dist/bundle.js"></script> 
+    <script src="dist/bundle.js"></script>
 </body>
+
 </html>
