@@ -2,13 +2,11 @@ const path = require('path');
 
 module.exports = {
   entry: './assets/js/index.js',
-
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     assetModuleFilename: 'images/[name][ext][query]',
   },
-
   module: {
     rules: [
       {
@@ -43,6 +41,5 @@ module.exports = {
       },
     ],
   },
-
   mode: 'production',
 };
