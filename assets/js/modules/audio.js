@@ -12,4 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
             label.textContent = "Music for good mood :)";
         }
     });
+
+    music.addEventListener('ended', () => {
+        label.textContent = "Music for good mood :)";
+    });
 });
