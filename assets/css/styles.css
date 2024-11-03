@@ -1,5 +1,5 @@
 * {
-  color: #2A1B3D;
+  color: #393341;
 }
 *:focus-visible {
   outline-color: #502784;
@@ -82,7 +82,7 @@ a:hover::after {
 select {
   width: 300px;
   border-radius: 4px;
-  border: 2px solid #2A1B3D;
+  border: 2px solid #393341;
   background: url(../../assets/images/caret-down.svg) no-repeat right;
   background-position-x: 97%;
   background-size: 16px;
@@ -143,7 +143,7 @@ select {
 }
 @media screen and (min-width: 1200px) {
   header {
-    border-bottom: 2px solid #2A1B3D;
+    border-bottom: 2px solid #393341;
   }
 }
 @media screen and (max-width: 767px) {
@@ -180,7 +180,7 @@ select {
   justify-content: space-between;
 }
 header {
-  background: #2A1B3D;
+  background: #393341;
 }
 .top-bar,
 .main-nav {
@@ -314,14 +314,14 @@ header {
 }
 .side-drawer ul li a {
   display: block;
-  color: #2A1B3D;
+  color: #393341;
   font-size: 16px;
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
 }
 .side-drawer ul li a:hover {
-  background: #2A1B3D;
+  background: #393341;
   color: #F7F6F4;
 }
 .side-drawer ul li a:hover:after {
@@ -332,7 +332,7 @@ header {
   background: none;
   border: none;
   font-size: 26px;
-  color: #2A1B3D;
+  color: #393341;
   padding: 5px;
   cursor: pointer;
   position: absolute;
@@ -409,10 +409,10 @@ header {
   padding: 5px 10px;
 }
 .hero-container .play-container:hover {
-  border-color: #2A1B3D;
+  border-color: #393341;
 }
 .hero-container .play-container:hover #play {
-  background-image: url(@{base-dir}assets/images/play-hover.svg);
+  background-image: url("https://vlototskyy.github.io/Hotel-Landing/assets/images/play-hover.svg");
   opacity: 1;
 }
 .hero-container .play-container:hover label {
@@ -426,7 +426,7 @@ header {
 .hero-container #play {
   width: 55px;
   height: 55px;
-  background-image: url(@{base-dir}assets/images/play.svg);
+  background-image: url("https://vlototskyy.github.io/Hotel-Landing/assets/images/play.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -459,7 +459,7 @@ header {
 @media screen and (min-width: 1200px) {
   .hero-container {
     max-height: 550px;
-    border-bottom: 2px solid #2A1B3D;
+    border-bottom: 2px solid #393341;
   }
   .hero-container .informational {
     -webkit-align-items: flex-start;
@@ -520,13 +520,14 @@ header {
     color: #F7F6F4;
   }
   .hero-container .informational {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../../../assets/images/slider-imgs/image_2.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("https://vlototskyy.github.io/Hotel-Landing/assets/images/slider-imgs/image_2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     color: #F7F6F4;
     border-radius: 5px;
+    padding: 25px;
   }
   .hero-container .informational h3,
   .hero-container .informational h4 {
@@ -537,12 +538,12 @@ header {
     font-size: 32px;
   }
   .hero-container .informational .buttons {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-  .hero-container .media-container {
-    display: none;
   }
   .hero-container .play-container {
     display: none;
@@ -674,7 +675,7 @@ header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(103, 89, 194, 0.6), rgba(103, 89, 194, 0.6)), url(@{base-dir}assets/images/news/restaurant-interior.png);
+  background-image: linear-gradient(rgba(103, 89, 194, 0.6), rgba(103, 89, 194, 0.6)), url("https://vlototskyy.github.io/Hotel-Landing/assets/images/news/restaurant-interior.png");
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
@@ -706,7 +707,7 @@ header {
 .news .cards-container .card {
   padding: 25px 25px 0;
   text-align: center;
-  border: 2px solid #2A1B3D;
+  border: 2px solid #393341;
   border-radius: 10px;
   background: #F7F6F4;
   transition: 0.3s transform ease;
@@ -744,7 +745,7 @@ header {
   text-wrap: auto;
   overflow: hidden;
   background: #FAFAFA;
-  border: 2px solid #2A1B3D;
+  border: 2px solid #393341;
   border-radius: 5px;
   transition: 0.3s all ease;
 }
@@ -760,7 +761,7 @@ header {
   gap: 10px 20px;
 }
 .review-card .review-header img {
-  border: 2px solid #2A1B3D;
+  border: 2px solid #393341;
   border-radius: 50%;
 }
 .review-card .review-header span {
@@ -783,7 +784,7 @@ header {
   margin-right: 2px;
 }
 footer {
-  background-color: #2A1B3D;
+  background-color: #393341;
 }
 footer * {
   color: #F7F6F4;
@@ -851,7 +852,7 @@ footer #newsletter-form {
 }
 footer #newsletter-form input[type="email"] {
   border: none;
-  color: #2A1B3D;
+  color: #393341;
   padding: 10px;
 }
 footer #newsletter-form input[type="email"]::placeholder {
@@ -859,7 +860,7 @@ footer #newsletter-form input[type="email"]::placeholder {
 }
 footer #newsletter-form button {
   padding: 10px 20px;
-  background-color: #2A1B3D;
+  background-color: #393341;
   color: #F7F6F4;
   border: none;
   cursor: pointer;
@@ -931,7 +932,7 @@ footer #newsletter-form button:hover {
   background-color: #F7F6F4;
   padding: 20px;
   border-radius: 8px;
-  border: 2px solid #2A1B3D;
+  border: 2px solid #393341;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
@@ -956,6 +957,6 @@ footer #newsletter-form button:hover {
   margin: 10px 0;
   font-size: 16px;
   box-sizing: border-box;
-  border: 2px solid #2A1B3D;
+  border: 2px solid #393341;
   border-radius: 5px;
 }
