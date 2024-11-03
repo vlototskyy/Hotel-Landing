@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const baseUrl = 'https://vlototskyy.github.io/Hotel-Landing/assets/data/',
+    const url = window.location.origin + window.location.pathname,
         destinationSelect = document.getElementById('destination-select');
 
     fetchDestinations();
 
     async function fetchDestinations() {
         try {
-            const response = await fetch(`${baseUrl}mock_data_locations.json`);
+            const response = await fetch(`${url}mock_data_locations.json`);
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const baseUrl ='https://vlototskyy.github.io/Hotel-Landing/',
+    const url = window.location.origin + window.location.pathname,
         testimonialsContainer = document.querySelector('.reviews-container'),
         glideElement = testimonialsContainer.closest('.glide'),
         maxRating = 5;
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function fetchReviews() {
         try {
-            const response = await fetch(`${baseUrl}data/mock_data_testimonials.json`);
+            const response = await fetch(`${url}data/mock_data_testimonials.json`);
 
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
