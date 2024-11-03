@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function fetchDestinations() {
         try {
-            const response = await fetch(`${url}mock_data_locations.json`);
+            const response = await fetch(`${url}data/mock_data_locations.json`);
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
