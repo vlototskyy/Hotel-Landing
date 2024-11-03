@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const baseUrl = '/Hotel-Landing/assets/data/',
+    const baseUrl = 'https://vlototskyy.github.io/Hotel-Landing/assets/data/',
         destinationSelect = document.getElementById('destination-select');
 
     fetchDestinations();
