@@ -1,0 +1,53 @@
+//
+//  Common
+//  ---------------------------------------------
+
+.review-card {
+    .lib-vendor-prefix-display();
+    .lib-vendor-prefix-flex-direction();
+    .lib-vendor-prefix-justify-content();
+    padding: @indent__m;
+    text-wrap: auto;
+    overflow: hidden;
+    background: @color__grayish;
+    border: 2px solid @color__primary;
+    border-radius: 5px;
+    transition: .3s all ease;
+
+    .review-header {
+        .lib-vendor-prefix-display();
+        .lib-vendor-box-align(center);
+        .lib-vendor-prefix-flex-wrap();
+        gap: @indent__s @indent__base;
+
+        img {
+            border: 2px solid @color__primary;
+            border-radius: 50%;
+        }
+
+        span {
+            font-size: 25px;
+            font-weight: @font-weight__semibold;
+        }
+
+        p {
+            flex: 1 1 100%;
+        }
+    }
+
+    .review-rating {
+        font-weight: @font-weight__semibold;
+    }
+
+    .star {
+        color: @color_gray;
+
+        &-filled {
+            color: @color__star;
+        }
+        
+        &:not(:last-of-type) {
+            margin-right: @indent__xs - 3;
+        }
+    }
+}

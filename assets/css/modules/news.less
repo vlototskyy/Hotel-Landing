@@ -35,6 +35,7 @@
         .card {
             padding: @indent__m @indent__m 0;
             text-align: center;
+            border: 2px solid @color__primary;
             border-radius: 10px;
             background: @color__base;
             transition: .3s transform ease;
@@ -62,6 +63,8 @@
 
 @media screen and (max-width: 479px) {
     .news {
+        padding: @indent__xl @indent__base - 5;
+
         .cards-container {
             .card {
                 padding: @indent__s + 5 @indent__s + 5 0;

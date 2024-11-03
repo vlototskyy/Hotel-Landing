@@ -4,10 +4,15 @@
 
 .destinations {
     position: relative;
-    padding: @indent__m;
+    padding: @indent__xl @indent__m;
     text-align: center;
     z-index: 1;
     min-height: 350px;
+
+    p {
+        max-width: 500px;
+        margin: @indent__l auto;
+    }
 
     > *:not(img) {
         position: relative;

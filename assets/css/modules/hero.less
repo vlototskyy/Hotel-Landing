@@ -12,17 +12,17 @@
         .lib-vendor-prefix-flex-direction();
 
         .dancing {
-            font-weight: 600;
+            font-weight: @font-weight__semibold;
             margin: 0 0 @indent__m;
         }
 
         h3 {
-            font-weight: 700;
+            font-weight: @font-weight__bold;
             margin: 0 0 @indent__base;
         }
 
         h4 {
-            font-weight: 500;
+            font-weight: @font-weight__heavier;
             margin: 0 0 @indent__l;
         }
 
@@ -47,17 +47,22 @@
             padding: @indent__xs @indent__s;
         
             &:hover {
-                border-color: #44318D;
+                border-color: @color__primary;
                 
                 #play {
                     background-image: url(../../../assets/images/play-hover.svg);
                     opacity: 1;
+                }
+
+                label {
+                    color: @color__secondary;
                 }
             }
 
             label {
                 font-size: 20px;
                 cursor: pointer;
+                pointer-events: none;
             }
         }
         
@@ -104,6 +109,7 @@
 @media screen and (min-width: 1200px) {
     .hero-container {
         max-height: 550px;
+        border-bottom: 2px solid @color__primary;
 
         .informational {
             .lib-vendor-box-align(flex-start);
@@ -174,6 +180,11 @@
 
 @media screen and (max-width: 639px) {
     .hero-container {
+
+        * {
+            color: @color__base
+        }
+
         .informational {
             background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../../../assets/images/slider-imgs/image_2.jpg);
             background-position: center;

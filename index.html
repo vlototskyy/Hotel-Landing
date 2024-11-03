@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,56 +12,49 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
 
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <header>
-        <header>
-            <div class="top-bar">
-                <img width="100px" height="66px" src="assets/images/logo.svg" alt="logo image">
-                <nav>
-                    <ul>
-                        <li class="sign-in"><a href="#">Sign in</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <!-- Burger Icon -->
-                <div class="burger-icon" onclick="toggleDrawer()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="outer-main-nav">
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#">Dining</a></li>
-                        <li><a href="#">Experience</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Offers</a></li>
-                        <li><a href="#">More</a></li>
-                    </ul>
-                    <button class="book-now button">Book now</button>
-                </nav>
-            </div>
-        </header>
+    <header role="banner">
+        <div class="top-bar">
+            <h1>Oscar's Hotels</h1>
+            <nav aria-label="Primary navigation">
+                <ul>
+                    <li class="sign-in"><a href="#" class="alt" aria-label="Sign in to your account">Sign in</a></li>
+                    <li><a class="alt" href="#">About</a></li>
+                    <li><a class="alt" href="#">Services</a></li>
+                    <li><a class="alt" href="#">Contact</a></li>
+                </ul>
+            </nav>
 
-        <!-- Side Drawer -->
-        <div class="side-drawer">
+            <button class="burger-icon" aria-expanded="false" aria-controls="side-drawer"
+                aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="outer-main-nav main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="#">Dining</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+            <button class="book-now button" aria-label="Book now">Book now</button>
+        </nav>
+
+        <div class="drawer-overlay" role="none"></div>
+        <div id="side-drawer" class="side-drawer" role="navigation" aria-hidden="true">
             <div class="side-drawer-inner">
-                <button class="close-drawer" onclick="toggleDrawer()">X</button>
+                <button class="close-drawer" aria-label="Close navigation menu">×</button>
                 <ul>
                     <li><a href="#">Sign in</a></li>
                     <li><a href="#">About</a></li>
@@ -74,122 +67,161 @@
                     <li><a href="#">Offers</a></li>
                     <li><a href="#">More</a></li>
                 </ul>
-                <button class="book-now button">Book now</button>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="hero-container">
+        <section class="hero-container" aria-labelledby="hero-title">
             <div class="informational">
                 <div class="inner">
-                    <h3 class="title dancing">Oscar's Paradise View</h3>
+                    <h3 id="hero-title" class="title dancing">Oscar's Paradise View</h3>
                     <h3>A hotel for every moment rich in emotion</h3>
                     <h4>Every moment feels like the first time in paradise view</h4>
                     <div class="buttons">
-                        <button class="button">Book now</button>
+                        <button class="button" aria-label="Book now">Book now</button>
                         <div class="play-container">
-                            <button id="play"></button>
-                            <label for="play">Take a tour</label>
+                            <button id="play" aria-label="Play music"></button>
+                            <label for="play">Music for good mood :)</label>
+                            <audio id="music" duration="500" src="assets/audio/never-gonna-give-you-up.MP3" preload="auto"></audio>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="media-container">
-                <div class="glide height-set">
+                <div class="glide height-set" role="region" aria-label="Image carousel">
                     <div class="glide__track height-set" data-glide-el="track">
                         <ul class="glide__slides height-set">
-                            <li class="glide__slide height-set"><img src="assets/images/slider-imgs/image_1.jpeg"></li>
-                            <li class="glide__slide"><img src="assets/images/slider-imgs/image_2.jpg"></li>
-                            <li class="glide__slide"><img src="assets/images/slider-imgs/image_3.jpg"></li>
+                            <li class="glide__slide height-set"><img src="assets/images/slider-imgs/image_1.jpeg"
+                                    alt="Resort image 1"></li>
+                            <li class="glide__slide"><img src="assets/images/slider-imgs/image_2.jpg"
+                                    alt="Resort image 2"></li>
+                            <li class="glide__slide"><img src="assets/images/slider-imgs/image_3.jpg"
+                                    alt="Resort image 3"></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            </div>
         </section>
 
-        <section id="destinations" class="destinations">
-            <h2>Our Destinations</h2>
-            <select id="destination-select">
-                <option>Hotel Oscar Colombo</option>
-                <option>Hotel Oscar Colombo</option>
-                <option>Hotel Oscar Colombo</option>
-                <option>Hotel Oscar Colombo</option>
-                <option>Hotel Oscar Colombo</option>
+        <section id="destinations" class="destinations" aria-labelledby="destinations-title">
+            <h2 id="destinations-title">Our Destinations</h2>
+            <label for="destination-select" class="sr-only">Select a destination</label>
+            <select id="destination-select" aria-label="Destination selection">
             </select>
-            <p>When you visit the island’s capital for a conference, a meeting or a seminar, an exquisite rendezvous with opulence awaits you at Hotel Oscar.</p>
-            <button class="button">Discover more</button>
-            <img src="assets/images/destinations/map.png" class="float-img" alt="Image 1">
-            <img src="assets/images/destinations/towels.png" class="float-img" alt="Image 2">
-            <img src="assets/images/destinations/coconut.png" class="float-img" alt="Image 3">
+            <p>When you visit the island’s capital for a conference, a meeting or a seminar, an exquisite rendezvous
+                with opulence awaits you at Hotel Oscar.</p>
+            <button class="button" aria-label="Discover more destinations">Discover more</button>
+            <img src="assets/images/destinations/map.png" class="float-img" alt="Map location">
+            <img src="assets/images/destinations/towels.png" class="float-img" alt="Pool towels">
+            <img src="assets/images/destinations/coconut.png" class="float-img" alt="Tropical coconut drink">
         </section>
 
-        <section id="news" class="news">
-            <h2>Explore something new</h2>
-            <h3>Close to home or across the world, Hilton is there for you with memorable offers and experiences. Check out what’s new.</h3>
+        <section id="news" class="news" aria-labelledby="news-title">
+            <h2 id="news-title">Explore something new</h2>
+            <h3>Close to home or across the world, Hilton is there for you with memorable offers and experiences. Check
+                out what’s new.</h3>
             <div class="cards-container">
                 <div class="card">
-                    <img src="assets/images/slider-imgs/image_1.jpeg" alt="">
+                    <img src="assets/images/slider-imgs/image_1.jpeg" alt="Hotel offer: Multiply your points">
                     <p>Multiply your points</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/slider-imgs/image_2.jpg" alt="">
+                    <img src="assets/images/slider-imgs/image_2.jpg" alt="Hotel offer: Earn up to 130k points">
                     <p>Earn up to 130k points</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/slider-imgs/image_3.jpg" alt="">
-                    <p>3 nights under 250$</p>
+                    <img src="assets/images/slider-imgs/image_3.jpg" alt="Hotel offer: 3 nights under $250">
+                    <p>3 nights under $250</p>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials">
-            <div class="container">
-                <h2>What Our Clients Say</h2>
-                <blockquote>
-                    <p>"This service has changed my life!"</p>
-                    <footer>- Happy Client</footer>
-                </blockquote>
-                <blockquote>
-                    <p>"Highly recommend for anyone looking for quality."</p>
-                    <footer>- Satisfied Customer</footer>
-                </blockquote>
+        <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
+            <h2 id="testimonials-title">What Our Clients Say</h2>
+            <div class="glide" role="region" aria-label="Client testimonials carousel">
+                <div class="glide__track" data-glide-el="track">
+                    <div class="glide__slides reviews-container">
+                    </div>
+                </div>
             </div>
         </section>
+
+        <div id="login-popup" class="login-popup" aria-hidden="true" role="dialog">
+            <div class="login-popup-content">
+                <button class="close-login" aria-label="Close login popup">×</button>
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button class="login-button" type="submit">Login</button>
+                </form>
+            </div>
+        </div>        
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
-            <nav>
-                <ul>
-                    <li><a href="#privacy">Privacy Policy</a></li>
-                    <li><a href="#terms">Terms of Service</a></li>
-                </ul>
-            </nav>
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-inner">
+                <div class="group" aria-labelledby="quick-links">
+                    <h4 id="quick-links">Quick Links</h4>
+                    <ul>
+                        <li><a class="alt" href="#">Room booking</a></li>
+                        <li><a class="alt" href="#">Rooms</a></li>
+                        <li><a class="alt" href="#">Contact</a></li>
+                        <li><a class="alt" href="#">Explore</a></li>
+                    </ul>
+                </div>
+
+                <div class="group" aria-labelledby="company-info">
+                    <h4 id="company-info">Company</h4>
+                    <ul>
+                        <li><a class="alt" href="#">Privacy policy</a></li>
+                        <li><a class="alt" href="#">Refund policy</a></li>
+                        <li><a class="alt" href="#">FAQ</a></li>
+                        <li><a class="alt" href="#">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="group" aria-labelledby="follow-us">
+                    <h4 id="follow-us">Follow Us</h4>
+                    <div class="social-icons">
+                        <a class="alt" href="#" aria-label="Facebook"><img width="30px" height="30px"
+                                src="assets/images/icons/facebook.svg" alt="Facebook"></a>
+                        <a class="alt" href="#" aria-label="Twitter"><img width="30px" height="30px"
+                                src="assets/images/icons/twitter.svg" alt="Twitter"></a>
+                        <a class="alt" href="#" aria-label="Instagram"><img width="30px" height="30px"
+                                src="assets/images/icons/instagram.svg" alt="Instagram"></a>
+                        <a class="alt" href="#" aria-label="LinkedIn"><img width="30px" height="30px"
+                                src="assets/images/icons/linkedin.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+
+                <div class="newsletter-signup group" aria-labelledby="newsletter">
+                    <h4 id="newsletter">Subscribe to Our Newsletter</h4>
+                    <form id="newsletter-form" aria-label="Newsletter signup form">
+                        <label for="email" class="sr-only">Enter your email address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <button type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Oscar's Paradise View. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        function toggleDrawer() {
-            document.querySelector('.side-drawer').classList.toggle('active');
-        }
-    </script>
-
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-
-    <script>
-        new Glide('.glide', {
-            type: 'carousel',
-            autoplay: 3000,
-            hoverPause: false,
-            animationDuration: 800
-        }).mount()
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="assets/js/audio.js"></script>
+    <script src="assets/js/side-drawer.js"></script>
+    <script src="assets/js/glide.js"></script>
+    <script src="assets/js/login-popup.js"></script>
+    <script src="assets/js/locations.js"></script>
+    <script src="assets/js/testimonials.js"></script>
 </body>
 
 </html>
