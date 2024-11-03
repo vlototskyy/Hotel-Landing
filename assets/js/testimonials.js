@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const testimonialsContainer = document.querySelector('.reviews-container'),
+    const baseUrl ='/Hotel-Landing/assets/data/',
+        testimonialsContainer = document.querySelector('.reviews-container'),
         glideElement = testimonialsContainer.closest('.glide'),
         maxRating = 5;
 

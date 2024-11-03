@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const destinationSelect = document.getElementById('destination-select');
+    const baseUrl = '/Hotel-Landing/assets/data/',
+        destinationSelect = document.getElementById('destination-select');
 
     fetchDestinations();
 
     async function fetchDestinations() {
         try {
-            const response = await fetch('../../data/mock_data_locations.json');
+            const response = await fetch(`${baseUrl}mock_data_locations.json`);
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
