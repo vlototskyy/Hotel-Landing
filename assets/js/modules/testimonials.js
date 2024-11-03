@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function fetchReviews() {
         try {
-            const response = await fetch('Hotel-Landing/data/mock_data_testimonials.json');
+            const response = await fetch('data/mock_data_testimonials.json');
 
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
