@@ -412,7 +412,7 @@ header {
   border-color: #2A1B3D;
 }
 .hero-container .play-container:hover #play {
-  background-image: url(../../../assets/images/play-hover.svg);
+  background-image: url(@{base-dir}assets/images/play-hover.svg);
   opacity: 1;
 }
 .hero-container .play-container:hover label {
@@ -426,7 +426,7 @@ header {
 .hero-container #play {
   width: 55px;
   height: 55px;
-  background-image: url(../../../assets/images/play.svg);
+  background-image: url(@{base-dir}assets/images/play.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -674,7 +674,7 @@ header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(103, 89, 194, 0.6), rgba(103, 89, 194, 0.6)), url(../../../assets/images/news/restaurant-interior.png);
+  background-image: linear-gradient(rgba(103, 89, 194, 0.6), rgba(103, 89, 194, 0.6)), url(@{base-dir}assets/images/news/restaurant-interior.png);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
@@ -851,6 +851,7 @@ footer #newsletter-form {
 }
 footer #newsletter-form input[type="email"] {
   border: none;
+  color: #2A1B3D;
   padding: 10px;
 }
 footer #newsletter-form input[type="email"]::placeholder {
