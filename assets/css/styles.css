@@ -86,6 +86,7 @@ select {
   background: url(../../assets/images/caret-down.svg) no-repeat right;
   background-position-x: 97%;
   background-size: 16px;
+  cursor: pointer;
   padding: 10px;
   font-size: 16px;
   appearance: none;
@@ -546,6 +547,18 @@ header {
     justify-content: center;
   }
   .hero-container .play-container {
+    border-color: #F7F6F4;
+  }
+  .hero-container .play-container #play {
+    display: none;
+  }
+  .hero-container .play-container:hover {
+    border-color: #F7F6F4;
+  }
+  .hero-container .play-container:hover label {
+    color: #F7F6F4;
+  }
+  .hero-container .media-container {
     display: none;
   }
 }

@@ -180,7 +180,6 @@
 
 @media screen and (max-width: 639px) {
     .hero-container {
-
         * {
             color: @color__base
         }
@@ -211,6 +210,22 @@
         }
 
         .play-container {
+            border-color: @color__base;
+
+            #play {
+                display: none;
+            }
+
+            &:hover {
+                border-color: @color__base;
+
+                label {
+                    color: @color__base;
+                }
+            }
+        }
+
+        .media-container {
             display: none;
         }
     }
